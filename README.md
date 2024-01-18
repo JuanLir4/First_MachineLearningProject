@@ -21,10 +21,10 @@ O script `main.py` contém o modelo de aprendizado de máquina. A rede neural es
 ```
 
 
-    # Compilando o modelo
+ # Compilando o modelo
     model.compile(optimizer='sgd', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Função para extrair características
+# Função para extrair características
     
     
    ```python
@@ -49,13 +49,13 @@ O script `main.py` contém o modelo de aprendizado de máquina. A rede neural es
         dados_treinoY = np.array([0, 1, 0, 1, 1, 1, 1, 0, 1])
    ```
 
-    # Treinando o modelo
+ # Treinando o modelo
     model.fit(dados_treinoX, dados_treinoY, epochs=80)
 
-    # Fazendo previsão
+ # Fazendo previsão
     previsao = model.predict(ExtrairProp(email))
 
-    # Classificando a previsão
+ # Classificando a previsão
     if float(previsao[0]) > 0.5:
         resultado_final = 1
     elif float(previsao[0]) < 0.5:
@@ -64,11 +64,10 @@ O script `main.py` contém o modelo de aprendizado de máquina. A rede neural es
     return resultado_final
 O modelo é treinado com dados de treino que incluem características extraídas de e-mails marcados como spam ou não.
 
-Automação Web com Selenium
+# Automação Web com Selenium
 O script main.py utiliza o Selenium para interagir com a interface web do Gmail. Ele faz login, navega na caixa de entrada e utiliza a IA treinada para classificar e-mails como spam ou não.
 
-python
-Copy code
+
 # Exemplo de utilização da IA
 respostaIA = IAMain(email_i)
 
