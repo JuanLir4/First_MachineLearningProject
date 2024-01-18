@@ -69,6 +69,8 @@ O script main.py utiliza o Selenium para interagir com a interface web do Gmail.
 
 
 # Exemplo de utilização da IA
+
+```
 respostaIA = IAMain(email_i)
 
 if respostaIA == 1:
@@ -76,7 +78,7 @@ if respostaIA == 1:
     time.sleep(2)
     nav.find_element('xpath', '//*[@id=":4"]/div[2]/div[1]/div/div[2]/div[3]/div').click()
 else:
-    # Se não é spam, volta para a página inicial para o próximo e-mail
+      #Se não é spam, volta para a página inicial para o próximo e-mail
     time.sleep(2)
     nav.find_element('xpath', '//*[@id="gb"]/div[2]/div[1]/div[4]/div/a/img').click()
     i += 1
